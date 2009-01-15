@@ -1,0 +1,389 @@
+DEPRECATION WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library will be REMOVED FROM RAILS 2.2. Please switch to the offical mysql gem: `gem install mysql`  See http://www.rubyonrails.org/deprecation for details. (called from mysql_connection at C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/mysql_adapter.rb:81)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+DEPRECATION WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library will be REMOVED FROM RAILS 2.2. Please switch to the offical mysql gem: `gem install mysql`  See http://www.rubyonrails.org/deprecation for details. (called from mysql_connection at C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/mysql_adapter.rb:81)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.621000)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.852000)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateProdutos (20090115162523)
+  [4;35;1mSQL (0.220000)[0m   [0mCREATE TABLE `produtos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.150000)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090115162523')[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mdescribe `produtos`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSHOW KEYS FROM `produtos`[0m
+
+
+Processing ProdutosController#index (for 127.0.0.1 at 2009-01-15 14:26:58) [GET]
+  Session ID: d634ac358daf91947c24773271913f12
+  Parameters: {"action"=>"index", "controller"=>"produtos"}
+DEPRECATION WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library will be REMOVED FROM RAILS 2.2. Please switch to the offical mysql gem: `gem install mysql`  See http://www.rubyonrails.org/deprecation for details. (called from mysql_connection at C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/mysql_adapter.rb:81)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mProduto Load (0.000000)[0m   [0;1mSELECT * FROM `produtos` [0m
+Rendering template within layouts/produtos
+Rendering produtos/index
+Completed in 0.06000 (16 reqs/sec) | Rendering: 0.01000 (16%) | DB: 0.00000 (0%) | 200 OK [http://localhost/produtos]
+
+
+Processing ProdutosController#new (for 127.0.0.1 at 2009-01-15 14:27:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--e18236344aa41846e21354c400438c8d07cebec6
+  Parameters: {"action"=>"new", "controller"=>"produtos"}
+  [4;35;1mProduto Columns (0.020000)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+Rendering template within layouts/produtos
+Rendering produtos/new
+Completed in 0.11000 (9 reqs/sec) | Rendering: 0.03000 (27%) | DB: 0.02000 (18%) | 200 OK [http://localhost/produtos/new]
+
+
+Processing ProdutosController#create (for 127.0.0.1 at 2009-01-15 14:27:06) [POST]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOTExZGIyNDNlZTRkNzQ3ZGM5
+ZDljOGZkYzIzY2E0NWE=--01cf0057ba9902553e4a13636208dc4f9a855f91
+  Parameters: {"commit"=>"Create", "produto"=>{"nome"=>"teste1"}, "authenticity_token"=>"37fc13772967a1c43b4f8720f3e078dbbc83c3e8", "action"=>"create", "controller"=>"produtos"}
+  [4;36;1mProduto Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mProduto Create (0.000000)[0m   [0;1mINSERT INTO `produtos` (`updated_at`, `nome`, `created_at`) VALUES('2009-01-15 16:27:06', 'teste1', '2009-01-15 16:27:06')[0m
+  [4;35;1mSQL (0.040000)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/produtos/1
+Completed in 0.10000 (9 reqs/sec) | DB: 0.06000 (60%) | 302 Found [http://localhost/produtos]
+
+
+Processing ProdutosController#show (for 127.0.0.1 at 2009-01-15 14:27:06) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsGOgtub3RpY2UiJlByb2R1dG8gd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7BkY6DGNzcmZfaWQiJTkxMWRiMjQzZWU0ZDc0N2Rj
+OWQ5YzhmZGMyM2NhNDVh--96235e7b587984aa3e21c6a6ee82ae0ff79de6d2
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"produtos"}
+  [4;36;1mProduto Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (0.000000)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 1) [0m
+Rendering template within layouts/produtos
+Rendering produtos/show
+Completed in 0.08000 (12 reqs/sec) | Rendering: 0.02000 (25%) | DB: 0.02000 (25%) | 200 OK [http://localhost/produtos/1]
+
+
+Processing ProdutosController#edit (for 127.0.0.1 at 2009-01-15 14:27:09) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsGOgtub3RpY2UiJlByb2R1dG8gd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7BlQ6DGNzcmZfaWQiJTkxMWRiMjQzZWU0ZDc0N2Rj
+OWQ5YzhmZGMyM2NhNDVh--9caf3331631953b281961fd921770716ac4e68bb
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"produtos"}
+  [4;36;1mProduto Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+  [4;35;1mProduto Load (0.000000)[0m   [0mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 1) [0m
+Rendering template within layouts/produtos
+Rendering produtos/edit
+Completed in 0.10000 (9 reqs/sec) | Rendering: 0.04000 (40%) | DB: 0.01000 (9%) | 200 OK [http://localhost/produtos/1/edit]
+
+
+Processing ProdutosController#index (for 127.0.0.1 at 2009-01-15 14:27:11) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOTExZGIyNDNlZTRkNzQ3ZGM5
+ZDljOGZkYzIzY2E0NWE=--01cf0057ba9902553e4a13636208dc4f9a855f91
+  Parameters: {"action"=>"index", "controller"=>"produtos"}
+  [4;36;1mProduto Load (0.010000)[0m   [0;1mSELECT * FROM `produtos` [0m
+Rendering template within layouts/produtos
+Rendering produtos/index
+  [4;35;1mProduto Columns (0.010000)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+Completed in 0.58000 (1 reqs/sec) | Rendering: 0.02000 (3%) | DB: 0.02000 (3%) | 200 OK [http://localhost/produtos]
+
+
+Processing ProdutosController#new (for 127.0.0.1 at 2009-01-15 14:27:13) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOTExZGIyNDNlZTRkNzQ3ZGM5
+ZDljOGZkYzIzY2E0NWE=--01cf0057ba9902553e4a13636208dc4f9a855f91
+  Parameters: {"action"=>"new", "controller"=>"produtos"}
+  [4;36;1mProduto Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `produtos`[0m
+Rendering template within layouts/produtos
+Rendering produtos/new
+Completed in 0.07000 (14 reqs/sec) | Rendering: 0.03000 (42%) | DB: 0.01000 (14%) | 200 OK [http://localhost/produtos/new]
+
+
+Processing ProdutosController#create (for 127.0.0.1 at 2009-01-15 14:27:16) [POST]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOTExZGIyNDNlZTRkNzQ3ZGM5
+ZDljOGZkYzIzY2E0NWE=--01cf0057ba9902553e4a13636208dc4f9a855f91
+  Parameters: {"commit"=>"Create", "produto"=>{"nome"=>"teste2"}, "authenticity_token"=>"37fc13772967a1c43b4f8720f3e078dbbc83c3e8", "action"=>"create", "controller"=>"produtos"}
+  [4;35;1mProduto Columns (0.000000)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduto Create (0.010000)[0m   [0mINSERT INTO `produtos` (`updated_at`, `nome`, `created_at`) VALUES('2009-01-15 16:27:16', 'teste2', '2009-01-15 16:27:16')[0m
+  [4;36;1mSQL (0.040000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/produtos/2
+Completed in 0.13000 (7 reqs/sec) | DB: 0.06000 (46%) | 302 Found [http://localhost/produtos]
+
+
+Processing ProdutosController#show (for 127.0.0.1 at 2009-01-15 14:27:16) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsGOgtub3RpY2UiJlByb2R1dG8gd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7BkY6DGNzcmZfaWQiJTkxMWRiMjQzZWU0ZDc0N2Rj
+OWQ5YzhmZGMyM2NhNDVh--96235e7b587984aa3e21c6a6ee82ae0ff79de6d2
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"produtos"}
+  [4;35;1mProduto Columns (0.010000)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+  [4;36;1mProduto Load (0.000000)[0m   [0;1mSELECT * FROM `produtos` WHERE (`produtos`.`id` = 2) [0m
+Rendering template within layouts/produtos
+Rendering produtos/show
+Completed in 0.04000 (25 reqs/sec) | Rendering: 0.01000 (25%) | DB: 0.01000 (25%) | 200 OK [http://localhost/produtos/2]
+
+
+Processing ProdutosController#index (for 127.0.0.1 at 2009-01-15 14:31:33) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsGOgtub3RpY2UiJlByb2R1dG8gd2FzIHN1Y2Nlc3NmdWxseSBjcmVh
+dGVkLgY6CkB1c2VkewY7BlQ6DGNzcmZfaWQiJTkxMWRiMjQzZWU0ZDc0N2Rj
+OWQ5YzhmZGMyM2NhNDVh--9caf3331631953b281961fd921770716ac4e68bb
+  Parameters: {"action"=>"index", "controller"=>"produtos"}
+DEPRECATION WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library will be REMOVED FROM RAILS 2.2. Please switch to the offical mysql gem: `gem install mysql`  See http://www.rubyonrails.org/deprecation for details. (called from mysql_connection at C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/mysql_adapter.rb:81)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mProduto Load (0.000000)[0m   [0;1mSELECT * FROM `produtos` [0m
+Rendering template within layouts/produtos
+Rendering produtos/index
+  [4;35;1mProduto Columns (0.030000)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+Completed in 0.09100 (10 reqs/sec) | Rendering: 0.01000 (10%) | DB: 0.03000 (32%) | 200 OK [http://localhost/produtos]
+
+
+Processing ProdutosController#index (for 127.0.0.1 at 2009-01-15 14:31:36) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOTExZGIyNDNlZTRkNzQ3ZGM5
+ZDljOGZkYzIzY2E0NWE=--01cf0057ba9902553e4a13636208dc4f9a855f91
+  Parameters: {"action"=>"index", "controller"=>"produtos"}
+  [4;36;1mProduto Load (0.000000)[0m   [0;1mSELECT * FROM `produtos` [0m
+Rendering template within layouts/produtos
+Rendering produtos/index
+  [4;35;1mProduto Columns (0.000000)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+Completed in 0.12100 (8 reqs/sec) | Rendering: 0.05000 (41%) | DB: 0.00000 (0%) | 200 OK [http://localhost/produtos]
+
+
+Processing ProdutosController#index (for 127.0.0.1 at 2009-01-15 14:31:58) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOTExZGIyNDNlZTRkNzQ3ZGM5
+ZDljOGZkYzIzY2E0NWE=--01cf0057ba9902553e4a13636208dc4f9a855f91
+  Parameters: {"action"=>"index", "controller"=>"produtos"}
+  [4;36;1mProduto Load (0.000000)[0m   [0;1mSELECT * FROM `produtos` [0m
+Rendering template within layouts/produtos
+Rendering produtos/index
+  [4;35;1mProduto Columns (0.010000)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+Completed in 0.07000 (14 reqs/sec) | Rendering: 0.02000 (28%) | DB: 0.01000 (14%) | 200 OK [http://localhost/produtos]
+
+
+Processing ProdutosController#index (for 127.0.0.1 at 2009-01-15 14:31:59) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOTExZGIyNDNlZTRkNzQ3ZGM5
+ZDljOGZkYzIzY2E0NWE=--01cf0057ba9902553e4a13636208dc4f9a855f91
+  Parameters: {"action"=>"index", "controller"=>"produtos"}
+  [4;36;1mProduto Load (0.000000)[0m   [0;1mSELECT * FROM `produtos` [0m
+Rendering template within layouts/produtos
+Rendering produtos/index
+  [4;35;1mProduto Columns (0.020000)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+Completed in 0.07000 (14 reqs/sec) | Rendering: 0.01000 (14%) | DB: 0.02000 (28%) | 200 OK [http://localhost/produtos]
+
+
+Processing ProdutosController#index (for 127.0.0.1 at 2009-01-15 14:32:20) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOTExZGIyNDNlZTRkNzQ3ZGM5
+ZDljOGZkYzIzY2E0NWE=--01cf0057ba9902553e4a13636208dc4f9a855f91
+  Parameters: {"action"=>"index", "controller"=>"produtos"}
+DEPRECATION WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library will be REMOVED FROM RAILS 2.2. Please switch to the offical mysql gem: `gem install mysql`  See http://www.rubyonrails.org/deprecation for details. (called from mysql_connection at C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/mysql_adapter.rb:81)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mProduto Load (0.010000)[0m   [0;1mSELECT * FROM `produtos` [0m
+Rendering template within layouts/produtos
+Rendering produtos/index
+  [4;35;1mProduto Columns (0.020000)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+Completed in 0.11100 (9 reqs/sec) | Rendering: 0.04100 (36%) | DB: 0.03000 (27%) | 200 OK [http://localhost/produtos]
+
+
+Processing ProdutosController#index (for 127.0.0.1 at 2009-01-15 14:32:23) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOTExZGIyNDNlZTRkNzQ3ZGM5
+ZDljOGZkYzIzY2E0NWE=--01cf0057ba9902553e4a13636208dc4f9a855f91
+  Parameters: {"action"=>"index", "controller"=>"produtos"}
+  [4;36;1mProduto Load (0.010000)[0m   [0;1mSELECT * FROM `produtos` [0m
+Rendering template within layouts/produtos
+Rendering produtos/index
+  [4;35;1mProduto Columns (0.010000)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+Completed in 0.06000 (16 reqs/sec) | Rendering: 0.02000 (33%) | DB: 0.02000 (33%) | 200 OK [http://localhost/produtos]
+
+
+Processing ProdutosController#index (for 127.0.0.1 at 2009-01-15 14:32:24) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOTExZGIyNDNlZTRkNzQ3ZGM5
+ZDljOGZkYzIzY2E0NWE=--01cf0057ba9902553e4a13636208dc4f9a855f91
+  Parameters: {"action"=>"index", "controller"=>"produtos"}
+  [4;36;1mProduto Load (0.000000)[0m   [0;1mSELECT * FROM `produtos` [0m
+Rendering template within layouts/produtos
+Rendering produtos/index
+  [4;35;1mProduto Columns (0.010000)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+Completed in 0.09100 (10 reqs/sec) | Rendering: 0.04000 (43%) | DB: 0.01000 (10%) | 200 OK [http://localhost/produtos]
+
+
+Processing ProdutosController#index (for 127.0.0.1 at 2009-01-15 14:32:45) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOTExZGIyNDNlZTRkNzQ3ZGM5
+ZDljOGZkYzIzY2E0NWE=--01cf0057ba9902553e4a13636208dc4f9a855f91
+  Parameters: {"action"=>"index", "controller"=>"produtos"}
+  [4;36;1mProduto Load (0.000000)[0m   [0;1mSELECT * FROM `produtos` [0m
+Rendering template within layouts/produtos
+Rendering produtos/index
+  [4;35;1mProduto Columns (0.020000)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+Completed in 0.07000 (14 reqs/sec) | Rendering: 0.01000 (14%) | DB: 0.02000 (28%) | 200 OK [http://localhost/produtos]
+
+
+Processing ProdutosController#index (for 127.0.0.1 at 2009-01-15 14:32:47) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOTExZGIyNDNlZTRkNzQ3ZGM5
+ZDljOGZkYzIzY2E0NWE=--01cf0057ba9902553e4a13636208dc4f9a855f91
+  Parameters: {"format"=>"pdf", "action"=>"index", "controller"=>"produtos"}
+  [4;36;1mProduto Load (0.010000)[0m   [0;1mSELECT * FROM `produtos` [0m
+Rendering produtos/index
+  [4;35;1mProduto Columns (0.020000)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+
+
+NameError (uninitialized constant ProdutosController::PDF):
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:493:in `const_missing'
+    /app/controllers/produtos_controller.rb:16:in `render_to_pdf'
+    /app/controllers/produtos_controller.rb:10:in `index'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:131:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:131:in `custom'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:160:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:160:in `respond'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:154:in `each'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:154:in `respond'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    /app/controllers/produtos_controller.rb:7:in `index'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    C:/Ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:112:in `handle_dispatch'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:78:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:62:in `dispatch'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/webrick.rb:66
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProdutosController#index (for 127.0.0.1 at 2009-01-15 14:33:13) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOTExZGIyNDNlZTRkNzQ3ZGM5
+ZDljOGZkYzIzY2E0NWE=--01cf0057ba9902553e4a13636208dc4f9a855f91
+  Parameters: {"action"=>"index", "controller"=>"produtos"}
+  [4;36;1mProduto Load (0.000000)[0m   [0;1mSELECT * FROM `produtos` [0m
+Rendering template within layouts/produtos
+Rendering produtos/index
+  [4;35;1mProduto Columns (0.020000)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+Completed in 0.07000 (14 reqs/sec) | Rendering: 0.01000 (14%) | DB: 0.02000 (28%) | 200 OK [http://localhost/produtos]
+
+
+Processing ProdutosController#index (for 127.0.0.1 at 2009-01-15 14:33:15) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlOTExZGIyNDNlZTRkNzQ3ZGM5
+ZDljOGZkYzIzY2E0NWE=--01cf0057ba9902553e4a13636208dc4f9a855f91
+  Parameters: {"format"=>"pdf", "action"=>"index", "controller"=>"produtos"}
+  [4;36;1mProduto Load (0.010000)[0m   [0;1mSELECT * FROM `produtos` [0m
+Rendering produtos/index
+  [4;35;1mProduto Columns (0.021000)[0m   [0mSHOW FIELDS FROM `produtos`[0m
+Sending data blablabla.pdf
+
+
+NoMethodError (undefined method `size' for false:FalseClass):
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/streaming.rb:123:in `send_data'
+    /app/controllers/produtos_controller.rb:13:in `index'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:131:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:131:in `custom'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:160:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:160:in `respond'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:154:in `each'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:154:in `respond'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    /app/controllers/produtos_controller.rb:10:in `index'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `send'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:579:in `call_filters'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    C:/Ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.1/lib/active_record/query_cache.rb:8:in `cache'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `send'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:529:in `process_without_filters'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/session_management.rb:130:in `process'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/base.rb:389:in `process'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:112:in `handle_dispatch'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:78:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/webrick_server.rb:62:in `dispatch'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/servers/webrick.rb:66
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.1/lib/active_support/dependencies.rb:510:in `require'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.1.1/lib/commands/server.rb:39
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
